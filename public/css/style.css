@@ -1,0 +1,229 @@
+/* Reset e estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card principal */
+.device-card {
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header do card */
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.card-header p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+/* Tabela de informações */
+.info-table {
+  margin: 0;
+}
+
+.info-table tr {
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.info-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.info-table tr:last-child {
+  border-bottom: none;
+}
+
+.info-table td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.info-label {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  width: 35%;
+}
+
+.info-value {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+}
+
+/* Badges personalizados */
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+/* Ícone animado */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icon-circle i {
+  font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Loading spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0;
+  }
+
+  .card-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .info-table td {
+    padding: 0.75rem;
+  }
+
+  .info-label {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+
+  .info-value {
+    font-size: 0.85rem;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-circle i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animações suaves */
+.card-body {
+  transition: all 0.3s ease;
+}
+
+/* Estilo para badges específicos */
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.badge.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.badge.bg-primary {
+  background-color: #007bff !important;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* Hover effects */
+.info-table tr:hover .badge {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
